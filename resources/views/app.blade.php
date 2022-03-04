@@ -12,11 +12,13 @@
 
 </head>
 <body>
-    <div class="container-fluid justify-content-center flex-wrap align-items-center text-center">
-        <div class="container justify-content-center flex-wrap align-items-center text-center">
+    <div class="container-fluid d-flex justify-content-center flex-wrap align-items-center text-center">
+        <div class="container d-flex justify-content-center flex-wrap align-items-center text-center">
             @foreach ($lista_film as $chiave => $film)
-            <div class="carta">
+            <div class="carta d-flex flex-column align-items-center justify-content-center text-center">
                 <p>titolo : {{$film['title']}}</p>
+                <p>titolo originale : {{$film['original_title']}}</p>
+                <p>{{$film['vote']}}</p>
             </div>
         @endforeach
         </div>
